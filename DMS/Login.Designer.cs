@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUsr = new System.Windows.Forms.TextBox();
+            this.txtPwd = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -52,31 +52,31 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "宿舍管理系统";
             // 
-            // textBox1
+            // txtUsr
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("宋体", 12F);
-            this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(95, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(205, 19);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "用户名";
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.txtUsr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsr.Font = new System.Drawing.Font("宋体", 12F);
+            this.txtUsr.ForeColor = System.Drawing.Color.Gray;
+            this.txtUsr.Location = new System.Drawing.Point(95, 74);
+            this.txtUsr.Name = "txtUsr";
+            this.txtUsr.Size = new System.Drawing.Size(205, 19);
+            this.txtUsr.TabIndex = 1;
+            this.txtUsr.Text = "用户名";
+            this.txtUsr.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.txtUsr.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
-            // textBox2
+            // txtPwd
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("宋体", 12F);
-            this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(95, 115);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(205, 19);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "密码";
-            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
-            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
+            this.txtPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPwd.Font = new System.Drawing.Font("宋体", 12F);
+            this.txtPwd.ForeColor = System.Drawing.Color.Gray;
+            this.txtPwd.Location = new System.Drawing.Point(95, 115);
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.Size = new System.Drawing.Size(205, 19);
+            this.txtPwd.TabIndex = 2;
+            this.txtPwd.Text = "密码";
+            this.txtPwd.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.txtPwd.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // linkLabel1
             // 
@@ -141,8 +141,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPwd);
+            this.Controls.Add(this.txtUsr);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel2);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -150,7 +150,6 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "登录";
-            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -161,8 +160,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUsr;
+        private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Button btnLogin;

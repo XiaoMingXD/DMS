@@ -18,51 +18,48 @@ namespace DMS
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "用户名")
-                textBox1.Text = "";
-            if (textBox1.ForeColor == Color.Gray)
-                textBox1.ForeColor = Color.Black;
+            if (txtUsr.Text == "用户名")
+                txtUsr.Text = "";
+            if (txtUsr.ForeColor == Color.Gray)
+                txtUsr.ForeColor = Color.Black;
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
+            if (txtUsr.Text == "")
             {
-                textBox1.Text = "用户名";
-                textBox1.ForeColor = Color.Gray;
+                txtUsr.Text = "用户名";
+                txtUsr.ForeColor = Color.Gray;
             }
         }
 
         private void textBox2_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text == "密码")
-                textBox2.Text = "";
-            if (textBox2.ForeColor == Color.Gray)
+            if (txtPwd.Text == "密码")
+                txtPwd.Text = "";
+            if (txtPwd.ForeColor == Color.Gray)
             {
-                textBox2.ForeColor = Color.Black;
-                textBox2.PasswordChar = '*';
+                txtPwd.ForeColor = Color.Black;
+                txtPwd.PasswordChar = '*';
             }
         }
 
         private void textBox2_Leave(object sender, EventArgs e)
         {
-            if (textBox2.Text == "")
+            if (txtPwd.Text == "")
             {
-                textBox2.Text = "密码";
-                textBox2.ForeColor = Color.Gray;
-                textBox2.PasswordChar = '\0';
+                txtPwd.Text = "密码";
+                txtPwd.ForeColor = Color.Gray;
+                txtPwd.PasswordChar = '\0';
             }
-        }
-        private void Login_Load(object sender, EventArgs e)
-        {
-            btnLogin.Focus();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (txtUsr.Text == "")
+            {
 
+            }
         }
-
-
     }
 }
