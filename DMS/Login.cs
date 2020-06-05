@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DMS.utils;
 
 namespace DMS
 {
@@ -16,7 +17,7 @@ namespace DMS
             InitializeComponent();
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
+        private void txtUsr_Enter(object sender, EventArgs e)
         {
             if (txtUsr.Text == "用户名")
                 txtUsr.Text = "";
@@ -24,7 +25,7 @@ namespace DMS
                 txtUsr.ForeColor = Color.Black;
         }
 
-        private void textBox1_Leave(object sender, EventArgs e)
+        private void txtUsr_Leave(object sender, EventArgs e)
         {
             if (txtUsr.Text == "")
             {
@@ -33,7 +34,7 @@ namespace DMS
             }
         }
 
-        private void textBox2_Enter(object sender, EventArgs e)
+        private void txtPwd_Enter(object sender, EventArgs e)
         {
             if (txtPwd.Text == "密码")
                 txtPwd.Text = "";
@@ -44,7 +45,7 @@ namespace DMS
             }
         }
 
-        private void textBox2_Leave(object sender, EventArgs e)
+        private void txtPwd_Leave(object sender, EventArgs e)
         {
             if (txtPwd.Text == "")
             {
@@ -56,10 +57,18 @@ namespace DMS
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsr.Text == "")
+            if (txtUsr.Text == "" || txtUsr.Text == "用户名" || txtPwd.Text == "" || txtPwd.Text == "密码")
             {
-
+                MessageBox.Show("请完整填写用户名和密码");
+                return;
             }
+            int rt = DataBase.LoginCheck(txtUsr.Text, txtPwd.Text);
+            if (rt == 0)
+                new Main(txtUsr.Text).Show();
+            if (rt == -102)
+                MessageBox.Show("", "登录失败");
+            if (rt == -1)
+                MessageBox.Show("用户名不存在或密码错误，请检查输入。", "登录失败");
         }
     }
 }

@@ -62,8 +62,8 @@
             this.txtUsr.Size = new System.Drawing.Size(205, 19);
             this.txtUsr.TabIndex = 1;
             this.txtUsr.Text = "用户名";
-            this.txtUsr.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.txtUsr.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.txtUsr.Enter += new System.EventHandler(this.txtUsr_Enter);
+            this.txtUsr.Leave += new System.EventHandler(this.txtUsr_Leave);
             // 
             // txtPwd
             // 
@@ -75,8 +75,8 @@
             this.txtPwd.Size = new System.Drawing.Size(205, 19);
             this.txtPwd.TabIndex = 2;
             this.txtPwd.Text = "密码";
-            this.txtPwd.Enter += new System.EventHandler(this.textBox2_Enter);
-            this.txtPwd.Leave += new System.EventHandler(this.textBox2_Leave);
+            this.txtPwd.Enter += new System.EventHandler(this.txtPwd_Enter);
+            this.txtPwd.Leave += new System.EventHandler(this.txtPwd_Leave);
             // 
             // linkLabel1
             // 
