@@ -59,14 +59,14 @@ namespace DMS
         {
             if (txtUsr.Text == "" || txtUsr.Text == "用户名" || txtPwd.Text == "" || txtPwd.Text == "密码")
             {
-                MessageBox.Show("请完整填写用户名和密码");
+                MessageBox.Show("请完整填写用户名和密码。");
                 return;
             }
             int rt = DataBase.LoginCheck(txtUsr.Text, txtPwd.Text);
             if (rt == 0)
                 new Main(txtUsr.Text).Show();
             if (rt == -102)
-                MessageBox.Show("", "登录失败");
+                MessageBox.Show("未知错误，请重试。", "登录失败");
             if (rt == -1)
                 MessageBox.Show("用户名不存在或密码错误，请检查输入。", "登录失败");
         }
